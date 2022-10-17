@@ -1,16 +1,26 @@
 export default {
-  name: 'news',
-  title: 'News',
+  name: 'testimonial',
+  title: 'Testimonial',
   type: 'document',
   fields: [
     {
-      name: 'link',
-      type: 'url',
-      title: 'Link'
-    },
-    {
       name: 'title',
       title: 'Title',
+      type: 'string',
+    },
+    {
+      name: 'body',
+      title: 'Description',
+      type: 'blockContent',
+    },
+    {
+      name: 'author',
+      title: 'Author',
+      type: 'string',
+    },
+    {
+      name: 'position',
+      title: 'Position',
       type: 'string',
     },
     {
@@ -22,18 +32,13 @@ export default {
       },
     },
     {
-      name: 'body',
-      title: 'Description',
-      type: 'blockContent',
-    },
-    {
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',
     },
     {
       name: 'slug',
-      title: 'Slug(Click on Generate and then Click on Publish.Make sure Slug was Unique for eachItem)',
+      title: 'Slug(Click on Generate and then Click on Publish)',
       type: 'slug',
       options: {
         source: 'title',
