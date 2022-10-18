@@ -4,15 +4,16 @@ export default {
   type: 'document',
   fields: [
     {
-      name: 'link',
-      type: 'url',
-      title: 'Link'
-    },
-    {
       name: 'title',
       title: 'Title',
       type: 'string',
     },
+    {
+      name: 'link',
+      type: 'url',
+      title: 'Link'
+    },
+    
     {
       name: 'mainImage',
       title: 'Image',
@@ -41,18 +42,4 @@ export default {
       },
     }
   ],
-
-  preview: {
-    select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
-    },
-    prepare(selection) {
-      const {author} = selection
-      return Object.assign({}, selection, {
-        subtitle: author && `by ${author}`,
-      })
-    },
-  },
 }
